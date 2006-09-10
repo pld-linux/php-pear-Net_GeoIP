@@ -28,7 +28,7 @@ geographic location of an IP address.
 In PEAR status of this package is: %{_status}.
 
 %description -l pl
-Korzystaj±ca z baz GeoIP firmy Maxmind biblioteka do precezyjnego
+Korzystaj±ca z baz GeoIP firmy Maxmind biblioteka do precyzyjnego
 okre¶lania lokalizacji geograficznej adresów IP.
 
 Ta klasa ma w PEAR status: %{_status}.
