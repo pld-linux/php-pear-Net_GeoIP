@@ -5,7 +5,7 @@
 %define		_pearname	Net_GeoIP
 
 Summary:	%{_pearname} - Library to perform geo-location lookups of IP addresses
-Summary(pl):	%{_pearname} - biblioteka do wykonywania wyszukiwañ lokalizacji geograficznych adresów IP
+Summary(pl.UTF-8):   %{_pearname} - biblioteka do wykonywania wyszukiwaÅ„ lokalizacji geograficznych adresÃ³w IP
 Name:		php-pear-%{_pearname}
 Version:	1.0.0
 Release:	0.RC1
@@ -27,9 +27,9 @@ geographic location of an IP address.
 
 In PEAR status of this package is: %{_status}.
 
-%description -l pl
-Korzystaj±ca z baz GeoIP firmy Maxmind biblioteka do precyzyjnego
-okre¶lania lokalizacji geograficznej adresów IP.
+%description -l pl.UTF-8
+KorzystajÄ…ca z baz GeoIP firmy Maxmind biblioteka do precyzyjnego
+okreÅ›lania lokalizacji geograficznej adresÃ³w IP.
 
 Ta klasa ma w PEAR status: %{_status}.
 
