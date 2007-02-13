@@ -5,7 +5,7 @@
 %define		_pearname	Net_GeoIP
 
 Summary:	%{_pearname} - Library to perform geo-location lookups of IP addresses
-Summary(pl.UTF-8):   %{_pearname} - biblioteka do wykonywania wyszukiwań lokalizacji geograficznych adresów IP
+Summary(pl.UTF-8):	%{_pearname} - biblioteka do wykonywania wyszukiwań lokalizacji geograficznych adresów IP
 Name:		php-pear-%{_pearname}
 Version:	1.0.0
 Release:	0.RC1
