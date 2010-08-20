@@ -3,16 +3,17 @@
 %define		_subclass	GeoIP
 %define		_status		beta
 %define		_pearname	Net_GeoIP
-
+%define		subver	RC3
+%define		rel		1
 Summary:	%{_pearname} - Library to perform geo-location lookups of IP addresses
 Summary(pl.UTF-8):	%{_pearname} - biblioteka do wykonywania wyszukiwań lokalizacji geograficznych adresów IP
 Name:		php-pear-%{_pearname}
 Version:	1.0.0
-Release:	0.RC1
+Release:	0.%{subver}.%{rel}
 License:	LGPL 2.1
 Group:		Development/Languages/PHP
-Source0:	http://pear.php.net/get/%{_pearname}-%{version}RC1.tgz
-# Source0-md5:	482f93c9d386ed864bbba7ad967fc789
+Source0:	http://pear.php.net/get/%{_pearname}-%{version}%{subver}.tgz
+# Source0-md5:	0614060aafef4b560a1361d163284e16
 URL:		http://pear.php.net/package/Net_GeoIP/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
@@ -41,6 +42,9 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{php_pear_dir}
 %pear_package_install
 
+# don't care for tests
+rm -rf $RPM_BUILD_ROOT%{php_pear_dir}/tests/%{_pearname}
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -50,3 +54,5 @@ rm -rf $RPM_BUILD_ROOT
 %{php_pear_dir}/.registry/*.reg
 %{php_pear_dir}/Net/GeoIP.php
 %{php_pear_dir}/Net/GeoIP
+
+%{php_pear_dir}/data/%{_pearname}
