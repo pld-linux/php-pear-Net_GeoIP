@@ -2,7 +2,7 @@
 %define		_status		beta
 %define		_pearname	Net_GeoIP
 %define		subver	RC3
-%define		rel		1
+%define		rel		2
 Summary:	%{_pearname} - Library to perform geo-location lookups of IP addresses
 Summary(pl.UTF-8):	%{_pearname} - biblioteka do wykonywania wyszukiwań lokalizacji geograficznych adresów IP
 Name:		php-pear-%{_pearname}
