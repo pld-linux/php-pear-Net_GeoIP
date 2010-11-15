@@ -1,6 +1,4 @@
 %include	/usr/lib/rpm/macros.php
-%define		_class		Net
-%define		_subclass	GeoIP
 %define		_status		beta
 %define		_pearname	Net_GeoIP
 %define		subver	RC3
@@ -20,6 +18,7 @@ BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.300
 Requires:	php-common >= 3:5.0.0
 Requires:	php-pear
+Suggests:	GeoIP-db-Country
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -38,13 +37,16 @@ Ta klasa ma w PEAR status: %{_status}.
 %prep
 %pear_package_setup
 
+# use system db
+rm .%{php_pear_dir}/data/Net_GeoIP/data/GeoIP.dat
+
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{php_pear_dir}
 %pear_package_install
 
-# don't care for tests
-rm -rf $RPM_BUILD_ROOT%{php_pear_dir}/tests/%{_pearname}
+# tests should not be packaged
+%{__rm} -r $RPM_BUILD_ROOT%{php_pear_dir}/tests/%{_pearname}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -55,5 +57,3 @@ rm -rf $RPM_BUILD_ROOT
 %{php_pear_dir}/.registry/*.reg
 %{php_pear_dir}/Net/GeoIP.php
 %{php_pear_dir}/Net/GeoIP
-
-%{php_pear_dir}/data/%{_pearname}
