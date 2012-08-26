@@ -5,7 +5,7 @@ Summary:	%{pearname} - Library to perform geo-location lookups of IP addresses
 Summary(pl.UTF-8):	%{pearname} - biblioteka do wykonywania wyszukiwań lokalizacji geograficznych adresów IP
 Name:		php-pear-%{pearname}
 Version:	1.0.0
-Release:	1
+Release:	2
 License:	LGPL 2.1
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{pearname}-%{version}.tgz
@@ -14,7 +14,7 @@ URL:		http://pear.php.net/package/Net_GeoIP/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.580
-Requires:	php-common >= 3:5.0.0
+Requires:	php(core) >= 5.0.0
 Requires:	php-pear
 Suggests:	GeoIP-db-Country
 BuildArch:	noarch
