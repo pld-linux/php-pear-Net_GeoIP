@@ -1,6 +1,5 @@
 %define		status		beta
 %define		pearname	Net_GeoIP
-%include	/usr/lib/rpm/macros.php
 Summary:	%{pearname} - Library to perform geo-location lookups of IP addresses
 Summary(pl.UTF-8):	%{pearname} - biblioteka do wykonywania wyszukiwań lokalizacji geograficznych adresów IP
 Name:		php-pear-%{pearname}
